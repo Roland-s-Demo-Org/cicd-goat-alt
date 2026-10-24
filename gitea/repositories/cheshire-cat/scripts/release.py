@@ -49,7 +49,7 @@ https://github.com/huge-success/sanic/milestone/{{milestone}}?closed=1
 """
 
 JINJA_RELEASE_NOTE_TEMPLATE = Environment(
-    loader=BaseLoader, extensions=["jinja2_time.TimeExtension"]
+    loader=BaseLoader, extensions=["jinja2_time.TimeExtension"], autoescape=True
 ).from_string(RELEASE_NOTE_TEMPLATE)
 
 RELEASE_NOTE_UPDATE_URL = (
